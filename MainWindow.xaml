@@ -1,0 +1,72 @@
+﻿<Window x:Name="frmMain" x:Class="Colta_Iulia_lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Colta_Iulia_lab2"
+        mc:Ignorable="d"
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" AutomationProperties.Name="frmMain" ResizeMode="NoResize">
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+    </Window.Background>
+    <Grid Margin="10,9,0.667,-28">
+        <Label Content=" Doughnuts - Bake &amp; Sale" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="214,26,0,0" Width="323" AutomationProperties.Name="IblTitle " FontSize="24" FontWeight="Bold"/>
+        <GroupBox Header="Raised" HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="167" Margin="128,89,0,0" AutomationProperties.Name="gbRaised " FontWeight="Bold">
+            <Label Content="Sugar" HorizontalAlignment="Left" Margin="0,0,0,37.333" VerticalAlignment="Bottom" RenderTransformOrigin="-0.267,-0.083" AutomationProperties.Name=" lblSugarRaised "/>
+        </GroupBox>
+        <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="54,296,0,0" RenderTransformOrigin="3.32,-0.328">
+            <GroupBox Header="Filled" Height="149" Width="216" Canvas.Left="323" Canvas.Top="-215" AutomationProperties.Name="gbFilled" FontWeight="Bold" RenderTransformOrigin="1.593,0.425">
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="72,51,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="114" AutomationProperties.Name=" txtChocolateFilled" IsReadOnly="True"/>
+            </GroupBox>
+            <Label Content="Lemon" Canvas.Left="338" Canvas.Top="-182" Width="79" AutomationProperties.Name=" lblLemonFilled"/>
+        </Canvas>
+        <Label Content="Glazed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="128,113,0,0" AutomationProperties.Name=" lblGlazedRaised"/>
+        <TextBox HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="89" Margin="179,117,0,0" AutomationProperties.Name="txtGlazedRaised " IsReadOnly="True"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="179,164,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="89" AutomationProperties.Name="txtSugarRaised " IsReadOnly="True"/>
+        <Label Content="Chocolate" HorizontalAlignment="Left" Margin="385,146,0,0" VerticalAlignment="Top" AutomationProperties.Name=" lblChocolateFilled"/>
+        <Label Content="Vanilla" HorizontalAlignment="Left" Margin="385,177,0,0" VerticalAlignment="Top" AutomationProperties.Name=" lblVanillaFilled"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="457,113,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108" AutomationProperties.Name="txtLemonFilled" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="457,188,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="108" AutomationProperties.Name=" txtVanillaFilled" IsReadOnly="True" RenderTransformOrigin="0.036,0.717"/>
+        <GroupBox Header="Current Sale" HorizontalAlignment="Left" Height="145" Margin="96,251,0,0" VerticalAlignment="Top" Width="555" AutomationProperties.Name="gbSale" FontWeight="Bold">
+            <Label Content="Quantity" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.483,-1.09" AutomationProperties.Name=" lblQuantity"/>
+        </GroupBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="179,281,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74" AutomationProperties.Name=" txtQuantity"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="273,281,0,0" VerticalAlignment="Top" AutomationProperties.Name=" lblType" RenderTransformOrigin="4.51,2.397"/>
+        <ComboBox HorizontalAlignment="Left" Margin="311,283,0,0" VerticalAlignment="Top" Width="91" AutomationProperties.Name=" cmbType " RenderTransformOrigin="0.5,0.5">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.253"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="413,281,0,0" VerticalAlignment="Top" AutomationProperties.Name=" lblPrice"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="457,282,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" AutomationProperties.Name="txtPrice" IsReadOnly="True"/>
+        <ListBox HorizontalAlignment="Left" Height="51" Margin="128,312,0,0" VerticalAlignment="Top" Width="409" AutomationProperties.Name="lstSale "/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="354,364,0,0" VerticalAlignment="Top" AutomationProperties.Name="lblTotal" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="385,368,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" AutomationProperties.Name=" txtTotal " IsReadOnly="True"/>
+        <Button Content="Add To Sale" HorizontalAlignment="Left" Margin="561,280,0,0" VerticalAlignment="Top" Width="75" AutomationProperties.Name="btnAddToSale"/>
+        <Button Content=" Remove Item" HorizontalAlignment="Left" Margin="561,312,0,0" VerticalAlignment="Top" Width="75" AutomationProperties.Name=" btnRemoveItem"/>
+        <Button Content=" Check Out " HorizontalAlignment="Left" Margin="561,364,0,0" VerticalAlignment="Top" Width="75" AutomationProperties.Name="btnCheckOut " FontWeight="Bold"/>
+        <Menu HorizontalAlignment="Left" Height="108" Margin="-145,0,0,0" VerticalAlignment="Top" Width="332">
+            <MenuItem Header="File">
+                <MenuItem Header="Doughnuts">
+                    <MenuItem Header="Make">
+                        <MenuItem Header="Raised">
+                            <MenuItem Header="Glazed"/>
+                            <MenuItem Header="Sugar"/>
+                        </MenuItem>
+                        <MenuItem Header="Filled"/>
+                    </MenuItem>
+                    <MenuItem Header="Stop"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem/>
+            <MenuItem/>
+        </Menu>
+
+    </Grid>
+</Window>
